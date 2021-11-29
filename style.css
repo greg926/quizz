@@ -76,7 +76,7 @@ form button:hover {
     color: white
 }
 .echec{
-    animation: echeck 0.3s ease-in-out;
+    animation: echec 0.3s ease-in-out;
 }
 
 @keyframes echec {
