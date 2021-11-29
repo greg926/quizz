@@ -35,6 +35,7 @@ function verifFunc(tableauResultas) {
 
     // console.log(verifTableau);
     afficherResultats(verifTableau);
+    couleursFonction(verifTableau);
     verifTableau = [];
 }
 
@@ -80,9 +81,32 @@ function afficherResultats(tabCheck) {
         default:
             'Wops, cas inattendu.'
     }
-
-
 }
+
+
+function couleursFonction(tabValBool) {
+
+    for(let j = 0; j < tabValBool.length; j++){
+
+        if(tabValBool[j] === true){
+            toutesLesQuestions[j].style.background = 'lightgreen';
+        } else {
+            toutesLesQuestions[j].style.background = '#ff3300';
+            toutesLesQuestions[j].classList.add('echec');
+
+            setTimeout(() => {
+                toutesLesQuestions[j].classList.remove('echec');
+            }, 500)
+        }
+    }
+}
+
+toutesLesQuestions.forEach(item => {
+    item.addEventListener('click', () => {
+        item.style.background = "white";
+    })
+
+})
 
 
 
